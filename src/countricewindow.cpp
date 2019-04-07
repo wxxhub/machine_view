@@ -41,8 +41,8 @@ void CountRiceWindow::showOrigionImage()
 
 void CountRiceWindow::on_pushButton_clicked()
 {
-    std::string fileName = QFileDialog::getOpenFileName(this, tr("open file"), " ",  tr("Allfile(*.*);;mp3file(*.mp3)")).toStdString();
-    Mat image = imread(fileName);
+    std::string file_name = QFileDialog::getOpenFileName(this, tr("open file"), " ",  tr("pngfile(*.png);jpegfile(*.jpeg);bmpfile(*.bmp);jpgfile(*.jpg)")).toStdString();
+    Mat image = imread(file_name);
     setOrigionImage(image);
     showOrigionImage();
 }

@@ -37,13 +37,18 @@ SOURCES += \
         main.cpp \
     src/mainwindow.cpp \
     src/image_process.cpp \
-    src/countricewindow.cpp
+    src/countricewindow.cpp \
+    src/numberdetector.cpp \
+    src/numdetwindow.cpp
 
 HEADERS += \
         include/mainwindow.h \
     include/image_process.h \
-    include/countricewindow.h
+    include/countricewindow.h \
+    include/numberdetector.h \
+    include/numdetwindow.h
 
 FORMS += \
     ui/countricewindow.ui \
-    ui/mainwindow.ui
+    ui/mainwindow.ui \
+    ui/numdetwindow.ui

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NumDetWindow</class>
+ <widget class="QMainWindow" name="NumDetWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>2</width>
+    <height>11</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>2</width>
+    <height>11</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="returnMain">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>返回主页</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createTemplate">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>0</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成模板</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="createProgressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>530</y>
+      <width>781</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="createState">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>510</y>
+      <width>761</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>就绪</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="matchNum">
+    <property name="geometry">
+     <rect>
+      <x>698</x>
+      <y>0</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>模板匹配</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="resultTable">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>100</y>
+      <width>102</width>
+      <height>350</height>
+     </rect>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>2</width>
+      <height>11</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="matchResult">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>30</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>匹配结果:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="matchStatistics">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>70</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>模板识别统计</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="matchBackgroud">
+    <property name="geometry">
+     <rect>
+      <x>566</x>
+      <y>0</y>
+      <width>231</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createBayesTemplate">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>0</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成贝叶斯模板</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="byesDetec">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>0</y>
+      <width>91</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>贝叶斯识别</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="byesResult">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>30</y>
+      <width>111</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Byes结果:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="byesMatchStatistics">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>70</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Byes识别统计</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="byesResultTable">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>100</y>
+      <width>102</width>
+      <height>350</height>
+     </rect>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>2</width>
+      <height>11</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>matchBackgroud</zorder>
+   <zorder>returnMain</zorder>
+   <zorder>createTemplate</zorder>
+   <zorder>createProgressBar</zorder>
+   <zorder>matchNum</zorder>
+   <zorder>createState</zorder>
+   <zorder>resultTable</zorder>
+   <zorder>matchResult</zorder>
+   <zorder>matchStatistics</zorder>
+   <zorder>createBayesTemplate</zorder>
+   <zorder>byesDetec</zorder>
+   <zorder>byesResult</zorder>
+   <zorder>byesMatchStatistics</zorder>
+   <zorder>byesResultTable</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>28</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

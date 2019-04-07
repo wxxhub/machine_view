@@ -19,6 +19,8 @@ public:
 private slots:
     void on_toCountRice_clicked();
 
+    void on_toNumDet_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
