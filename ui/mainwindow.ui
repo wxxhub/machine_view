@@ -13,12 +13,18 @@
   <property name="windowTitle">
    <string>王鑫鑫机器视觉实验</string>
   </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="toCountRice">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>30</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -30,14 +36,66 @@
    <widget class="QPushButton" name="toNumDet">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>0</y>
+      <x>0</x>
+      <y>260</y>
       <width>141</width>
       <height>51</height>
      </rect>
     </property>
     <property name="text">
      <string>数字识别</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="toPCAFaceDet">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>260</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA人脸识别</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>230</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>智能计算:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>机器视觉:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="toNumDet_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数字识别2</string>
     </property>
    </widget>
   </widget>

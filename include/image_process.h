@@ -17,4 +17,23 @@ private:
     int rice_number_;
 };
 
+class ImageProcess
+{
+public:
+    ImageProcess();
+
+    std::list<cv::Mat> cutImage(cv::Mat image, int cols_num, int rows_num);
+};
+
+class NumDet
+{
+public:
+    NumDet();
+
+
+private:
+//    std::
+
+};
+
 #endif // IMAGE_PROCESS_H

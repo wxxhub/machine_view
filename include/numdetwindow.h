@@ -35,6 +35,8 @@ private slots:
 
     void on_byesMatchStatistics_clicked();
 
+    void on_reloadPJI_clicked();
+
 private:
     Ui::NumDetWindow *ui;
 

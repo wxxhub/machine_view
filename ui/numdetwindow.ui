@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>数字识别</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="returnMain">
@@ -151,12 +151,12 @@
      <rect>
       <x>180</x>
       <y>0</y>
-      <width>121</width>
+      <width>161</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>生成贝叶斯模板</string>
+     <string>生成贝叶斯条件概率</string>
     </property>
    </widget>
    <widget class="QPushButton" name="byesDetec">
@@ -214,6 +214,19 @@
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="reloadPJI">
+    <property name="geometry">
+     <rect>
+      <x>342</x>
+      <y>0</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>载入贝叶斯pji</string>
+    </property>
+   </widget>
    <zorder>matchBackgroud</zorder>
    <zorder>returnMain</zorder>
    <zorder>createTemplate</zorder>
@@ -228,6 +241,7 @@
    <zorder>byesResult</zorder>
    <zorder>byesMatchStatistics</zorder>
    <zorder>byesResultTable</zorder>
+   <zorder>reloadPJI</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

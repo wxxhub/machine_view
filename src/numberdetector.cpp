@@ -88,6 +88,7 @@ int NumberDetector::createBayesTemple(string directory)
         prior_probabilaty_[i] = prior_probabilaty_[i]/image_sum;
         printf("%d prior_probabilaty: %f\n",i, prior_probabilaty_[i]);
     }
+    savePJI();
 }
 
 void NumberDetector::templeProcess(std::list<Mat> mat_list, int num)
@@ -180,7 +181,7 @@ void NumberDetector::templeBayesProcess(std::list<Mat> mat_list, int num)
     }
 
     printf("w(%d):\n", num);
-    printByesTemple(temple_list);
+//    printByesTemple(temple_list);
     // Pj(wi)
     list<list<uchar>>::iterator temple_iter = temple_list.begin();
 
@@ -200,7 +201,7 @@ void NumberDetector::templeBayesProcess(std::list<Mat> mat_list, int num)
         p_j_i_[j][num] = (p_j_i_[j][num]+1.0)/(Ni+2.0);
         printf("p_j_i_[%d][%d]: %-3.5f", j, num, p_j_i_[j][num]);
     }
-    printPJI();
+//    printPJI();
 }
 
 float NumberDetector::match(Mat image, int &result)
@@ -467,6 +468,35 @@ double NumberDetector::getMaxPosProb(int &result)
         {
             max = postertior_probability_[i];
             result = i;
+        }
+    }
+}
+
+void NumberDetector::savePJI()
+{
+    ofstream pji_out;
+    pji_out.open(PJI_FILE_NAME, ios::out);
+    for (int i = 0; i < 10; i++)
+    {
+        pji_out<<"#["<<i<<"]\n";
+        for (int j = 0; j < TEMPLE_LEN*TEMPLE_LEN; j++)
+        {
+            pji_out<<p_j_i_[j][i]<<" ";
+        }
+        pji_out<<"\n\n";
+    }
+    pji_out.close();
+}
+
+void NumberDetector::analysisPJI()
+{
+    ifstream fin(PJI_FILE_NAME);
+    string strs;
+    if (fin.is_open())
+    {
+        while (getline(fin,strs))
+        {
+            printf("%s\n", strs);
         }
     }
 }

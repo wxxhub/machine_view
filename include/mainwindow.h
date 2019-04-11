@@ -21,6 +21,10 @@ private slots:
 
     void on_toNumDet_clicked();
 
+    void on_toPCAFaceDet_clicked();
+
+    void on_toNumDet_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -31,8 +31,13 @@ void CountRice::process(Mat image, Mat& result_image)
     erode(gray_image, back_image, Mat(), Point(-1, -1), 5);
     gray_image = gray_image - back_image;
     imwrite("-gray_image.jpg", gray_image);
-    threshold(gray_image, gray_image, 0, 255.0, CV_THRESH_BINARY | THRESH_OTSU);
 
+    Mat average_image;
+    double m = mean(gray_image)[0];
+    threshold(gray_image, gray_image, 0, 255.0, CV_THRESH_BINARY | THRESH_OTSU);
+    threshold(gray_image, average_image, m, 255.0, CV_THRESH_BINARY);
+
+    printf("average:%f\n", m);
     erode(gray_image, gray_image, Mat(), Point(-1, -1), 1);
     dilate(gray_image, gray_image, Mat(), Point(-1, -1), 1, 4);
     erode(gray_image, gray_image, Mat(), Point(0, 0), 1);
@@ -40,6 +45,7 @@ void CountRice::process(Mat image, Mat& result_image)
 
     imwrite("gray_image.jpg", gray_image);
     imwrite("back.jpg", back_image);
+    imwrite("average_image.jpg", average_image);
 
     vector<vector<Point>> contours;
     findContours(gray_image, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
@@ -81,4 +87,25 @@ void CountRice::process(Mat image, Mat& result_image)
 int CountRice::riceNumber()
 {
     return rice_number_;
+}
+
+list<Mat> ImageProcess::cutImage(Mat image, int cols_num, int rows_num)
+{
+    list<Mat> mat_list;
+    int width = image.cols / cols_num;
+    int height = image.rows / rows_num;
+//    printf("######height: %d width: %d\n", height, width);
+    for (int x = 0; x < cols_num; x++)
+    {
+        for (int y = 0; y < rows_num; y++)
+        {
+            Rect rect(x*width, y*height, width, height);
+            Mat image_cut = Mat(image, rect);
+            mat_list.push_back(image_cut);
+//            char name[36];
+//            sprintf(name, "cut_%d_%d.jpg", x, y);
+//            imwrite(name, image_cut);
+        }
+    }
+    return mat_list;
 }

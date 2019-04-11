@@ -39,16 +39,26 @@ SOURCES += \
     src/image_process.cpp \
     src/countricewindow.cpp \
     src/numberdetector.cpp \
-    src/numdetwindow.cpp
+    src/numdetwindow.cpp \
+    src/facedetector.cpp \
+    src/facedetwindow.cpp \
+    src/numdetwindow2.cpp
 
 HEADERS += \
         include/mainwindow.h \
     include/image_process.h \
     include/countricewindow.h \
     include/numberdetector.h \
-    include/numdetwindow.h
+    include/numdetwindow.h \
+    include/facedetector.h \
+    include/facedetwindow.h \
+    include/numdetwindow2.h
 
 FORMS += \
     ui/countricewindow.ui \
     ui/mainwindow.ui \
-    ui/numdetwindow.ui
+    ui/numdetwindow.ui \
+    ui/facedetwindow.ui \
+    ui/numdetwindow2.ui
+
+RESOURCES +=

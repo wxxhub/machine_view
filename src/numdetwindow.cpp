@@ -90,9 +90,11 @@ void NumDetWindow::on_matchStatistics_clicked()
 
 void NumDetWindow::on_createBayesTemplate_clicked()
 {
+    ui->createProgressBar->setValue(0);
     std::string file_direct = QFileDialog::getExistingDirectory(this,"请选择模板路径","./").toStdString();
     ui->createState->setText("正在生成贝叶斯模板...");
     num_detector_.createBayesTemple(file_direct);
+    ui->createProgressBar->setValue(100);
     ui->createState->setText("生成贝叶斯模板完成!");
 }
 
@@ -117,4 +119,9 @@ void NumDetWindow::on_byesMatchStatistics_clicked()
     }
     ui->byesResultTable->setColumnWidth(0,40);
     ui->byesResultTable->setColumnWidth(1,60);
+}
+
+void NumDetWindow::on_reloadPJI_clicked()
+{
+    num_detector_.analysisPJI();
 }
