@@ -429,7 +429,7 @@ void NumberDetector::resetBayesTemple(uchar temple[][TEMPLE_LEN], int mat_size)
     {
         for (int y = 0; y < TEMPLE_LEN; y++)
         {
-            if (1.0*temple[x][y]/sum < 0.05)
+            if (1.0*temple[x][y]/sum < Alpha)
             {
                 temple[x][y] = 0;
             }

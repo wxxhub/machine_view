@@ -11,7 +11,7 @@
 const int  UINT_LEN = RESIZE_LEN/TEMPLE_LEN;
 
 #define MIN_RATE 0.3
-#define alpha 0.05
+#define Alpha 0.05
 #define AMP_FACTOR 2
 
 const std::string PJI_FILE_NAME = "pji.txt";

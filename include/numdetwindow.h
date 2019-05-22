@@ -7,6 +7,7 @@
 
 
 #include "include/numberdetector.h"
+#include "include/wxx_pca.h"
 
 namespace Ui {
 class NumDetWindow;
@@ -37,13 +38,18 @@ private slots:
 
     void on_reloadPJI_clicked();
 
+    void on_createPCA_clicked();
+
 private:
     Ui::NumDetWindow *ui;
 
-    NumberDetector num_detector_;
+    NumberDetector *num_detector_;
+    WxxPCA *pac_;
+
     QStringList table_header_;
     QStandardItemModel  *table_model_ = new QStandardItemModel();
     QStandardItemModel  *byes_table_model_ = new QStandardItemModel();
+    QStandardItemModel  *pca_table_model_ = new QStandardItemModel();
 };
 
 #endif // NUMDETWINDOW_H

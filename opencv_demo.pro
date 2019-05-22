@@ -15,7 +15,8 @@ TEMPLATE = app
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DEPRECATED_WARNINGS \
+            BOOST_USE_LIB
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -25,12 +26,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 INCLUDEPATH += /home/wxx/lib/Opencv3.4.0/include \
                /home/wxx/lib/Opencv3.4.0/include/opencv \
                /home/wxx/lib/Opencv3.4.0/include/opencv2 \
+               /usr/include/eigen3
 
 LIBS += /home/wxx/lib/Opencv3.4.0/lib/libopencv_highgui.so \
         /home/wxx/lib/Opencv3.4.0/lib/libopencv_core.so \
         /home/wxx/lib/Opencv3.4.0/lib/libopencv_imgcodecs.so \
         /home/wxx/lib/Opencv3.4.0/lib/libopencv_objdetect.so \
         /home/wxx/lib/Opencv3.4.0/lib/libopencv_imgproc.so \
+        /home/wxx/lib/Opencv3.4.0/lib/libopencv_video.so \
+        /home/wxx/lib/Opencv3.4.0/lib/libopencv_videoio.so \
+        /usr/lib/x86_64-linux-gnu/libboost_system.a \
+        /usr/lib/x86_64-linux-gnu/libboost_thread.a \
+
 
 
 SOURCES += \
@@ -42,7 +49,8 @@ SOURCES += \
     src/numdetwindow.cpp \
     src/facedetector.cpp \
     src/facedetwindow.cpp \
-    src/numdetwindow2.cpp
+    src/numdetwindow2.cpp \
+    src/wxx_pca.cpp
 
 HEADERS += \
         include/mainwindow.h \
@@ -52,7 +60,8 @@ HEADERS += \
     include/numdetwindow.h \
     include/facedetector.h \
     include/facedetwindow.h \
-    include/numdetwindow2.h
+    include/numdetwindow2.h \
+    include/wxx_pca.h
 
 FORMS += \
     ui/countricewindow.ui \

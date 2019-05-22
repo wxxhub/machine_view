@@ -42,8 +42,8 @@
    <widget class="QPushButton" name="createTemplate">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>0</y>
+      <x>0</x>
+      <y>100</y>
       <width>89</width>
       <height>25</height>
      </rect>
@@ -136,9 +136,9 @@
    <widget class="QLabel" name="matchBackgroud">
     <property name="geometry">
      <rect>
-      <x>566</x>
+      <x>436</x>
       <y>0</y>
-      <width>231</width>
+      <width>361</width>
       <height>501</height>
      </rect>
     </property>
@@ -149,8 +149,8 @@
    <widget class="QPushButton" name="createBayesTemplate">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>0</y>
+      <x>0</x>
+      <y>190</y>
       <width>161</width>
       <height>25</height>
      </rect>
@@ -217,14 +217,121 @@
    <widget class="QPushButton" name="reloadPJI">
     <property name="geometry">
      <rect>
-      <x>342</x>
-      <y>0</y>
-      <width>141</width>
+      <x>0</x>
+      <y>220</y>
+      <width>161</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
      <string>载入贝叶斯pji</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>170</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>贝叶斯</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>80</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>模板匹配</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>290</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="createPCA">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>310</y>
+      <width>161</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA数据生成</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="PCAResultTable">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>100</y>
+      <width>102</width>
+      <height>350</height>
+     </rect>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>2</width>
+      <height>11</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="PCAResult">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>111</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA结果:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PCADetec">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>0</y>
+      <width>91</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA识别</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="PCAMatchStatistics">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>70</y>
+      <width>101</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PCA识别统计</string>
     </property>
    </widget>
    <zorder>matchBackgroud</zorder>
@@ -242,6 +349,14 @@
    <zorder>byesMatchStatistics</zorder>
    <zorder>byesResultTable</zorder>
    <zorder>reloadPJI</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>createPCA</zorder>
+   <zorder>PCAResultTable</zorder>
+   <zorder>PCAResult</zorder>
+   <zorder>PCADetec</zorder>
+   <zorder>PCAMatchStatistics</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
